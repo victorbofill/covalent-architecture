@@ -6,10 +6,12 @@ export default class Story extends Component {
   render() {
     return (
       <Fragment>
-        <figure className="story-figure">
-          <img />
-          <figcaption>Some text fluff bullshit about how we came to be.</figcaption>
-        </figure>
+        <article>
+          <figure className="story-figure">
+            <img />
+            <figcaption>Some text fluff bullshit about how we came to be.</figcaption>
+          </figure>
+        </article>
       </Fragment>
   );
   }

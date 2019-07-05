@@ -63,16 +63,14 @@ export default class App extends Component {
             </ul>
           </header>
 
-          <article>
-            <Switch>
-              <Route exact path="/" component={Splash}/>
-              <Route path="/story" component={Story}/>
-              <Route path="/process" component={Process}/>
-              <Route path="/design" component={Design}/>
-              <Route path="/values" component={Values}/>
-              <Route path="/connect" component={Connect}/>
+          <Switch>
+            <Route exact path="/" component={Splash}/>
+            <Route path="/story" component={Story}/>
+            <Route path="/process" component={Process}/>
+            <Route path="/design" component={Design}/>
+            <Route path="/values" component={Values}/>
+            <Route path="/connect" component={Connect}/>
             </Switch>
-          </article>
         </main>
       </Router>
     );
