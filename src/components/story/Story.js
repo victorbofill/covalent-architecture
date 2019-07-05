@@ -13,6 +13,6 @@ export default class Story extends Component {
           </figure>
         </article>
       </Fragment>
-  );
+    );
   }
 }

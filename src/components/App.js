@@ -11,7 +11,7 @@ import Values from './values/Values';
 import './app.scss';
 
 export default class App extends Component {
-  isSplashLoaded = (match) => {
+  isSplashLoaded(match) {
     const { pathname } = window.location;
     const isActive = pathname === '/' || pathname === match;
     return isActive;
@@ -27,35 +27,35 @@ export default class App extends Component {
             <ul className="ul">
               <NavLink
                 to="/story"
-                activeClassName={"story-link"}
+                activeClassName={'story-link'}
                 isActive={() => isSplashLoaded('/story')}
               >
                 <li>story</li>
               </NavLink>
               <NavLink
                 to="/process"
-                activeClassName={"process-link"}
+                activeClassName={'process-link'}
                 isActive={() => isSplashLoaded('/process')}
               >
                 <li>process</li>
               </NavLink>
               <NavLink
                 to="/design"
-                activeClassName={"design-link"}
+                activeClassName={'design-link'}
                 isActive={() => isSplashLoaded('/design')}
               >
                 <li>design & services</li>
               </NavLink>
               <NavLink
                 to="/values"
-                activeClassName={"values-link"}
+                activeClassName={'values-link'}
                 isActive={() => isSplashLoaded('/values')}
               >
                 <li>values</li>
               </NavLink>
               <NavLink
                 to="/connect"
-                activeClassName={"connect-link"}
+                activeClassName={'connect-link'}
                 isActive={() => isSplashLoaded('/connect')}
               >
                 <li>connect</li>
@@ -70,7 +70,7 @@ export default class App extends Component {
             <Route path="/design" component={Design}/>
             <Route path="/values" component={Values}/>
             <Route path="/connect" component={Connect}/>
-            </Switch>
+          </Switch>
         </main>
       </Router>
     );

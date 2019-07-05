@@ -13,6 +13,6 @@ export default class Process extends Component {
           </figure>
         </article>
       </Fragment>
-  );
+    );
   }
 }
