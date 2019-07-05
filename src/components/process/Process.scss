@@ -1,0 +1,12 @@
+.process-figure {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    img {
+        border: 1px solid red;
+        height: 10rem;
+        width: 10rem;
+    }
+}
