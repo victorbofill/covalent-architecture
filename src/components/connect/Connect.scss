@@ -1,0 +1,67 @@
+.connect {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+
+	.map {
+		img {
+			max-height: fit-content;
+			max-width: fit-content;
+			display: block;
+			margin: 3em auto;
+		}
+
+		img.map-logo {
+			position: relative;
+			z-index: 0;
+			bottom: 27em;
+			left: -7em;
+			opacity: .5;
+    }
+  }
+
+  .contact {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    
+    figure {
+      margin: 1em auto;
+      
+      img.logo {
+        max-height: fit-content;
+        display: block;
+        margin: 0 auto;
+      }
+
+      figcaption {
+        font-weight: bold;
+        color: pink;
+      }
+    }
+
+    ul.address-list {
+      padding-left: 0;
+      margin: 1em auto;
+
+      li {
+        list-style-type: none;
+        padding: .5em 0;
+      }
+    }
+
+    .address {
+      margin: 1em auto;
+      text-align: center;
+
+      h2 {
+        color: grey;
+        font-size: 1em;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
