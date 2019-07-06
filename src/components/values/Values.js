@@ -21,11 +21,11 @@ export default class Values extends Component {
         </blockquote>
 
         <blockquote className="right">
-          <p>We value <span className="buzz-word brown">creativity & innovation</span></p>
+          <p>We value <span className="buzz-word grey">creativity & innovation</span></p>
         </blockquote>
 
         <blockquote>
-          <p>We value <span className="buzz-word brown">collaboration</span>,<br/>
+          <p>We value <span className="buzz-word pink">collaboration</span>,<br/>
             <sub><strong>and enjoy working closely with YOU to help your project and vision come to reality!</strong></sub></p>
         </blockquote>
       </article>

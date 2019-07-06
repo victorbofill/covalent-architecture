@@ -1,5 +1,5 @@
 header {
-  background-color: gray;
+  background-color: rgb(41, 41, 42);
   bottom: 10rem;
   position: absolute;
   width: 99%;
@@ -16,7 +16,7 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      color: black;
+      color: rgb(168, 169, 172);
       text-decoration: none;
     }
 
@@ -39,28 +39,28 @@ header {
 
     li:after {
       content: '    |';
-      color: black;
+      color: rgb(168, 169, 172);
       white-space: pre;
     }
 
     .story-link {
-      color: lightgreen;
+      color: rgb(156, 194, 126);
     }
 
     .process-link {
-      color: lavender;
+      color: rgb(159, 173, 205);
     }
     
     .design-link {
-      color: plum;
+      color: rgb(192, 119, 141);
     }
     
     .values-link {
-      color: lightblue;
+      color: rgb(109, 182, 201);
     }
     
     .connect-link {
-      color: lightyellow;
+      color: rgb(237, 222, 88);
     }
   }
 }

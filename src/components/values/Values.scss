@@ -15,23 +15,24 @@
     }
     
     .green {
-        color: green;
+      color: rgb(156, 194, 126);
     }
     
     .blue {
-        color: blue;
-    }
-    
-    .purple {
-        color: purple
-    }
-    
-    .brown {
-        color: brown;
+        color: rgb(109, 182, 201);
     }
 
-    .red {
-        color: red;
+    .purple {
+        color: rgb(159, 173, 205);
+    }
+  
+    .grey {
+        color: rgb(159, 173, 205);
+        text-shadow: -2px 2px rgb(237, 222, 88);
+    }
+
+    .pink {
+        color: rgb(192, 119, 141);
     }
 
     sub {
