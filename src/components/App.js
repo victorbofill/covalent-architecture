@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-do
 import Splash from './splash/Splash';
 import Connect from './connect/Connect';
 import Design from './design/Design';
+import Projects from './projects/Projects';
 import Process from './process/Process';
 import Story from './story/Story';
 import Values from './values/Values';
@@ -67,6 +68,7 @@ export default class App extends Component {
             <Route exact path="/" component={Splash}/>
             <Route path="/story" component={Story}/>
             <Route path="/process" component={Process}/>
+            <Route path="/design/projects" component={Projects}/>
             <Route path="/design" component={Design}/>
             <Route path="/values" component={Values}/>
             <Route path="/connect" component={Connect}/>
