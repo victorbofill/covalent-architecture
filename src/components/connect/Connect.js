@@ -11,7 +11,7 @@ export default class Connect extends Component {
     return (
       <article className="connect">
         <div className="map">
-          <img src={map} />,
+          <img src={map} />
           <img className="map-logo" src={mapLogo} />
         </div>
 
