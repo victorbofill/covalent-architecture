@@ -9,7 +9,7 @@ export default class Splash extends Component {
     return (
       <article className="splash">
         <figure>
-          <h2><span className="covalent">covalent</span> architecture</h2>
+          <h2><span className="covalent">covalent</span> <span className="architecture">architecture</span></h2>
           <figcaption>
             <span className="term">/ kō vāl ənt / architecture / </span>
             <span className="definition">bonds formed by the sharing of ideas and goals between people</span>
