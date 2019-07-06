@@ -12,7 +12,7 @@ function request(url, options = {}, data) {
 const get = (options = {}) => request('/api/dropbox', { method: 'GET', options });
 
 const api = {
-  retrieveTestData: () => {
+  getTestData: () => {
     return get();
   },
 };
