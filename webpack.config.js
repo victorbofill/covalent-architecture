@@ -9,11 +9,12 @@ module.exports = {
   output: {
     path,
     filename: 'bundle.[hash].js',
-    publicPath: '/'
+    publicPath: '/',
+    
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlPlugin({ template: './src/index.html' })
+    new HtmlPlugin({ template: './src/index.html' }),
   ],
   module: {
     rules: [
@@ -21,8 +22,8 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.(scss)$/,
@@ -40,9 +41,18 @@ module.exports = {
           },
         ],
       },
-    ]
+      {
+        test: /\.(ttf|eot|woff|woff2)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[ext]',
+          },
+        },
+      },
+    ],
   },
   devServer: {
     historyApiFallback: true,
-  }
-};  
+  },
+};
