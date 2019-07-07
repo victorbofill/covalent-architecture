@@ -6,8 +6,8 @@ import api from '../../services/dropbox/api';
 
 export default class Test extends Component {
   async retrieveTestData() {
-    const testData = await api.getTestData();
-    console.log('user: ', testData);
+    const imageLinks = await api.getImageLinks('commercial', 'food');
+    console.log('imageLinks: ', imageLinks);
   }
 
   render() {
