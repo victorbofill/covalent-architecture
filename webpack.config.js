@@ -12,6 +12,13 @@ module.exports = {
     publicPath: '/',
     
   },
+  devServer: {
+    proxy: {
+      '/api/*': {
+        target: 'http://localhost:3000',
+      },
+    },
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlPlugin({ template: './src/index.html' }),
