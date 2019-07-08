@@ -4,12 +4,10 @@ import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-do
 import Splash from './splash/Splash';
 import Connect from './connect/Connect';
 import Design from './design/Design';
-import Projects from './projects/Projects';
+import Projects from './design/projects/Projects';
 import Process from './process/Process';
 import Story from './story/Story';
 import Values from './values/Values';
-
-import Test from './test/Test';
 
 import './app.scss';
 
@@ -63,7 +61,6 @@ export default class App extends Component {
               >
                 <li>connect</li>
               </NavLink>
-              <NavLink to="/test"><li>test</li></NavLink>
             </ul>
           </header>
 
@@ -75,7 +72,6 @@ export default class App extends Component {
             <Route path="/design" component={Design}/>
             <Route path="/values" component={Values}/>
             <Route path="/connect" component={Connect}/>
-            <Route path="/test" component={Test}/>
           </Switch>
         </main>
       </Router>
