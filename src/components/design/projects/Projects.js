@@ -15,7 +15,10 @@ export default class Projects extends Component {
   }
 
   componentDidMount() {
+    const activeCategory = window.location.search.slice(1);
+    this.setState({ activeCategory });
     this.retrieveCategories();
+    this.retrieveProjects({ target: { value: activeCategory } });
   }
 
   retrieveCategories = async () => {
@@ -27,9 +30,11 @@ export default class Projects extends Component {
     const category = e.target.value;
     const projects = await api.getProjects(category);
     this.setState({ projects, activeCategory: category });
+    this.retrieveImageLinks({ target: { value: projects[0] } });
   }
 
   retrieveImageLinks = async e => {
+    this.setState({ imageLinks: [] });
     const project = e.target.value;
     const { activeCategory } = this.state;
     const imageLinks = await api.getImageLinks(activeCategory, project);
@@ -38,12 +43,14 @@ export default class Projects extends Component {
 
   render() {
     const { retrieveProjects, retrieveImageLinks } = this;
-    const { categories, projects, imageLinks } = this.state;
+    const { categories, projects, imageLinks, activeCategory } = this.state;
 
     return (
       <article className="projects">
-        <select onChange={retrieveProjects}>
-          <option>Please select a category</option>
+        <select
+          onChange={retrieveProjects}
+          value={activeCategory}
+        >
           {categories.length && categories.map(categoryObject => {
             const { category } = categoryObject;
             return <option
@@ -54,7 +61,7 @@ export default class Projects extends Component {
           })}
         </select>
         <Carousel>
-          {imageLinks && imageLinks.map(imageLink => {
+          {imageLinks.length && imageLinks.map(imageLink => {
             return <div key={imageLink}>
               <img src={imageLink} />
               <p className="legend">Legend 1</p>
