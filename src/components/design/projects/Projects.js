@@ -60,14 +60,16 @@ export default class Projects extends Component {
             </option>;
           })}
         </select>
-        <Carousel>
-          {imageLinks.length && imageLinks.map(imageLink => {
-            return <div key={imageLink}>
-              <img src={imageLink} />
-              <p className="legend">Legend 1</p>
-            </div>;
-          })}
-        </Carousel>
+        <section className="carousel-container">
+          <Carousel>
+            {imageLinks.length && imageLinks.map(imageLink => {
+              return <div key={imageLink}>
+                <img src={imageLink} />
+                <p className="legend">Legend 1</p>
+              </div>;
+            })}
+          </Carousel>
+        </section>
         <select onChange={retrieveImageLinks}>
           {projects.map(project => {
             return <option

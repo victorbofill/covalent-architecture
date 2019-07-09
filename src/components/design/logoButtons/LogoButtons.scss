@@ -9,74 +9,50 @@
   .button {
     border-radius: 50%;
     position: absolute;
+
+    p {
+      margin: 0;
+      top: 48%;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+    }
   }
 
-  .institutional {
+  .firstButton {
     height: 12em;
     width: 12em;
     top: 7.5em;
     z-index: 2;
-
-    p {
-      top: 4.5em;
-      left: 3.2em;
-      position: absolute;
-    }
   }
   
-  .residential {
+  .secondButton {
     height: 16em;
     width: 16em;
     left: 7em;
-    z-index: 1;
-
-    p {
-      top: 6.5em;
-      left: 5.2em;
-      position: absolute;
-    }
   }
   
-  .commercial {
+  .thirdButton {
     height: 21.5em;
     width: 21.5em;
     top: 9em;
     left: 16.5em;
     z-index: 0;
-
-    p {
-      top: 9.5em;
-      left: 8em;
-      position: absolute;
-    }
   }
   
-  .industrial {
+  .fourthButton {
     height: 9.4em;
     width: 9.4em;
     top: 8.5em;
     left: 32.8em;
     z-index: 1;
-
-    p {
-      top: 2.5em;
-      left: 3.2em;
-      position: absolute;
-    }
   }
   
-  .tenant {
+  .fifthButton {
     height: 9.2em;
     width: 9.2em;
     top: 25.5em;
     left: 29.5em;
     z-index: 1;
-
-    p {
-      text-align: center;
-      top: 2.5em;
-      left: 1.2em;
-      position: absolute;
-    }
   }
 }
