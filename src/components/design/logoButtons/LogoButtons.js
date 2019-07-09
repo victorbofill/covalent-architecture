@@ -35,7 +35,6 @@ export default class Story extends Component {
       <figure className="button-container">
         {/* The class names of these buttons is less than ideal in order to account for potential changes in the category names */}
         {categories.length && categories.map((category, index) => {
-          console.log('category: ', category);
           return <NavLink
             key={category.category}
             to={`/design/projects?${category.category}`}>
