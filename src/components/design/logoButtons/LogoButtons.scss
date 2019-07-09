@@ -1,0 +1,82 @@
+.button-container {
+  height: 35em;
+  width: 43em;
+  position: relative;
+  background-image: url('../../../assets/img/covalent-bond.svg');
+  background-repeat: no-repeat;
+  font-size: 14pt;
+
+  .button {
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .institutional {
+    height: 12em;
+    width: 12em;
+    top: 7.5em;
+    z-index: 2;
+
+    p {
+      top: 4.5em;
+      left: 3.2em;
+      position: absolute;
+    }
+  }
+  
+  .residential {
+    height: 16em;
+    width: 16em;
+    left: 7em;
+    z-index: 1;
+
+    p {
+      top: 6.5em;
+      left: 5.2em;
+      position: absolute;
+    }
+  }
+  
+  .commercial {
+    height: 21.5em;
+    width: 21.5em;
+    top: 9em;
+    left: 16.5em;
+    z-index: 0;
+
+    p {
+      top: 9.5em;
+      left: 8em;
+      position: absolute;
+    }
+  }
+  
+  .industrial {
+    height: 9.4em;
+    width: 9.4em;
+    top: 8.5em;
+    left: 32.8em;
+    z-index: 1;
+
+    p {
+      top: 2.5em;
+      left: 3.2em;
+      position: absolute;
+    }
+  }
+  
+  .tenant {
+    height: 9.2em;
+    width: 9.2em;
+    top: 25.5em;
+    left: 29.5em;
+    z-index: 1;
+
+    p {
+      text-align: center;
+      top: 2.5em;
+      left: 1.2em;
+      position: absolute;
+    }
+  }
+}

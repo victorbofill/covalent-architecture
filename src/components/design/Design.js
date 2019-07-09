@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 
-import venn from '../../assets/img/venn.png';
+import LogoButtons from './logoButtons/LogoButtons';
+
 import './Design.scss';
 
 export default class Story extends Component {
   render() {
     return (
       <article className="design">
-        <NavLink to='/design/projects'><img src={venn}/></NavLink>
+        <LogoButtons />
         <blockquote>
           <p>From <span className="buzz-word green">big</span> projects to <span className="buzz-word green">small</span> projects,<br/>
             <sub>our team’s experience ranges in both size and type. Our experience includes custom residential, multi-family, commerical , and industrial.</sub></p>
