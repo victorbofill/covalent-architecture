@@ -9,6 +9,7 @@ import Process from './process/Process';
 import Story from './story/Story';
 import Values from './values/Values';
 
+import logo from '../assets/img/covalent-bond.svg';
 import styles from './App.scss';
 
 export default class App extends Component {
@@ -25,6 +26,13 @@ export default class App extends Component {
       <Router>
         <header className={styles.AppHeader}>
           <ul className="ul">
+            <NavLink
+              to="/"
+              className={'nav-logo'}
+              isActive={() => isSplashLoaded('/')}
+            >
+              <img src ={logo} />
+            </NavLink>
             <NavLink
               to="/story"
               activeClassName={'story-link'}

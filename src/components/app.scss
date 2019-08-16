@@ -2,25 +2,24 @@
 
 
 :local(.AppHeader) {
-  background: pink;
-  background-color: rgb(41, 41, 42);
+  background-color: $footer-gray;
   bottom: 10rem;
   position: absolute;
-  width: 99%;
+  width: 100%;
 
   ul {
     display: flex;
     justify-content: center;
-    list-style-type: none;
     margin: 0;
-    padding: 0;
-    height: 3em;
+    padding: 2rem;
+    position: relative;
+    bottom: 3px;
     
     a {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      color: rgb(168, 169, 172);
+      color: $footer-link;
       text-decoration: none;
     }
 
@@ -33,19 +32,28 @@
     }
 
     li {
-      font-size: 2rem;
+      font-size: 3rem;
       font-family: 'GothicB';
     }
 
     li:before {
-      content: '    ';
+      content: '  ';
       white-space: pre;
     }
 
     li:after {
-      content: '    |';
-      color: rgb(168, 169, 172);
+      content: '  |';
+      color: $footer-bar;
       white-space: pre;
+      position: relative;
+      bottom: 2px;
+    }
+
+    .nav-logo {
+      width: 6rem;
+      height: 3rem;
+      position: relative;
+      top: 6px;
     }
 
     .story-link {
