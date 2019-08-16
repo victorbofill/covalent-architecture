@@ -57,23 +57,23 @@
     }
 
     .story-link {
-      color: rgb(156, 194, 126);
+      color: $green;
     }
 
     .process-link {
-      color: rgb(159, 173, 205);
+      color: $purple;
     }
     
     .design-link {
-      color: rgb(192, 119, 141);
+      color: $red;
     }
     
     .values-link {
-      color: rgb(109, 182, 201);
+      color: $blue;
     }
     
     .connect-link {
-      color: rgb(237, 222, 88);
+      color: $yellow;
     }
   }
 }
