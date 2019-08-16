@@ -8,3 +8,54 @@ $footer-bar: #808285;
 // SIZING
 
 $view-height: calc(100vh - 17.7rem);
+
+
+// MIXINS
+
+@mixin story-process-common {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: $view-height;
+	padding: 4rem 6rem;
+	overflow: hidden;
+
+	.content-container {
+		display: grid;
+		grid-template-columns: 37.5rem auto;
+		grid-column-gap: 4rem;
+		align-content: center;
+	}
+	
+	figure {
+		align-self: center;
+
+		img {
+			width: 100%;
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+	}
+
+	.text-container {
+		grid-column-start: 2;
+		align-self: center;
+
+		aside {
+			margin-bottom: 2rem;
+
+			span {
+				display: block;
+			}
+
+			.quote-text {
+				font-family: 'GothicBI';
+			}
+			
+			.quote-author {
+				text-align: right;	
+			}
+		}
+	}
+}

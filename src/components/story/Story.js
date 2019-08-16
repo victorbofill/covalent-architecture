@@ -6,11 +6,11 @@ export default class Story extends Component {
   render() {
     return (
       <article className={styles.Story}>
-        <section className="story-container">
-          <figure className="story-figure">
+        <section className="content-container">
+          <figure>
             <img src={storyImage} />
           </figure>
-          <section className="story-text">
+          <section className="text-container">
             <aside>
               <p>
                 <span className="quote-text">“We shape our buildings, and afterwards, our buildings shape us.”</span>
