@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -40,4 +41,17 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+}
+
+.body-copy-p {
+  margin: 2rem 3rem;
+}
+
+.body-copy-p:last-of-type {
+  margin: 2rem 3rem 0;
 }
