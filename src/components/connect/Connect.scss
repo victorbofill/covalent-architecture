@@ -3,29 +3,28 @@
 
 :local(.Connect) {
   @include content-size;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 5rem 12rem;
 
 	.map {
-		img {
-			max-height: fit-content;
-			max-width: fit-content;
-			display: block;
-			margin: 3em auto;
-		}
+    position: relative;
+    
+    img.map-image {
+      height: 40rem;
+    }
 
 		img.map-logo {
-			position: relative;
-			z-index: 0;
-			bottom: 27em;
-			left: -7em;
+			position: absolute;
+			z-index: 999;
+      left: -4rem;
+      top: 7rem;
+      height: 25rem;
 			opacity: .5;
     }
   }
 
   .contact {
-    margin: 2em;
     display: flex;
     flex-direction: column;
     

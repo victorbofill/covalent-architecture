@@ -11,7 +11,7 @@ export default class Connect extends Component {
     return (
       <article className={styles.Connect}>
         <div className="map">
-          <img src={map} />
+          <img src={map} className="map-image" />
           <img className="map-logo" src={mapLogo} />
         </div>
 
