@@ -1,9 +1,8 @@
-@font-face {
-  font-family: 'GothicB';
-  src: url(../assets/fonts/gothicb.woff) format('woff');
-}
+@import '../Variables.scss';
 
-header {
+
+.AppHeader {
+  background: pink;
   background-color: rgb(41, 41, 42);
   bottom: 10rem;
   position: absolute;

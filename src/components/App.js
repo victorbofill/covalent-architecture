@@ -9,7 +9,7 @@ import Process from './process/Process';
 import Story from './story/Story';
 import Values from './values/Values';
 
-import './app.scss';
+import styles from './App.scss';
 
 export default class App extends Component {
   isSplashLoaded(match) {
@@ -23,47 +23,46 @@ export default class App extends Component {
 
     return (
       <Router>
+        <header className="AppHeader">
+          <ul className="ul">
+            <NavLink
+              to="/story"
+              activeClassName={'story-link'}
+              isActive={() => isSplashLoaded('/story')}
+            >
+              <li>story</li>
+            </NavLink>
+            <NavLink
+              to="/process"
+              activeClassName={'process-link'}
+              isActive={() => isSplashLoaded('/process')}
+            >
+              <li>process</li>
+            </NavLink>
+            <NavLink
+              to="/design"
+              activeClassName={'design-link'}
+              isActive={() => isSplashLoaded('/design')}
+            >
+              <li>design & services</li>
+            </NavLink>
+            <NavLink
+              to="/values"
+              activeClassName={'values-link'}
+              isActive={() => isSplashLoaded('/values')}
+            >
+              <li>values</li>
+            </NavLink>
+            <NavLink
+              to="/connect"
+              activeClassName={'connect-link'}
+              isActive={() => isSplashLoaded('/connect')}
+            >
+              <li>connect</li>
+            </NavLink>
+          </ul>
+        </header>
         <main>
-          <header className="header">
-            <ul className="ul">
-              <NavLink
-                to="/story"
-                activeClassName={'story-link'}
-                isActive={() => isSplashLoaded('/story')}
-              >
-                <li>story</li>
-              </NavLink>
-              <NavLink
-                to="/process"
-                activeClassName={'process-link'}
-                isActive={() => isSplashLoaded('/process')}
-              >
-                <li>process</li>
-              </NavLink>
-              <NavLink
-                to="/design"
-                activeClassName={'design-link'}
-                isActive={() => isSplashLoaded('/design')}
-              >
-                <li>design & services</li>
-              </NavLink>
-              <NavLink
-                to="/values"
-                activeClassName={'values-link'}
-                isActive={() => isSplashLoaded('/values')}
-              >
-                <li>values</li>
-              </NavLink>
-              <NavLink
-                to="/connect"
-                activeClassName={'connect-link'}
-                isActive={() => isSplashLoaded('/connect')}
-              >
-                <li>connect</li>
-              </NavLink>
-            </ul>
-          </header>
-
           <Switch>
             <Route exact path="/" component={Splash}/>
             <Route path="/story" component={Story}/>
