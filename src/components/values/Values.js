@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
-import './Values.scss';
+import styles from './Values.scss';
 
 export default class Values extends Component {
   render() {
     return (
-      <article className="values">
+      <article className={styles.Values}>
         <blockquote>
           <p>We value <span className="buzz-word green">our clients</span>,<br/>
             <sub>and hope to continue to create long lasting relationships.</sub></p>
         </blockquote>
 
-        <blockquote className="right">
+        <blockquote className="right integrity">
           <p>We value <span className="buzz-word blue">integrity</span> & <span className="buzz-word blue">transparency</span></p>
         </blockquote>
 
@@ -21,12 +21,12 @@ export default class Values extends Component {
         </blockquote>
 
         <blockquote className="right">
-          <p>We value <span className="buzz-word grey">creativity & innovation</span></p>
+          <p>We value <span className="buzz-word yellow">creativity & innovation</span></p>
         </blockquote>
 
         <blockquote>
-          <p>We value <span className="buzz-word pink">collaboration</span>,<br/>
-            <sub><strong>and enjoy working closely with YOU to help your project and vision come to reality!</strong></sub></p>
+          <p>We value <span className="buzz-word red">collaboration</span>,<br/>
+            <sub className="collab-sub"><strong>and enjoy working closely with YOU to help your project and vision come to reality!</strong></sub></p>
         </blockquote>
       </article>
     );

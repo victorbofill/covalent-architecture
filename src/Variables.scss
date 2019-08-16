@@ -17,14 +17,18 @@ $view-height: calc(100vh - 17.7rem);
 
 // MIXINS
 
-@mixin story-process-common {
-  display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
+@mixin content-size {
+  width: 100%;
 	height: $view-height;
-	padding: 4rem 6rem;
+	padding: 5rem 6rem;
 	overflow: hidden;
+}
+
+@mixin story-process-common {
+  @include content-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 	.content-container {
 		display: grid;
