@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-
-import map from '../../assets/img/map.png';
-import mapLogo from '../../assets/img/covalent-bond.png';
+import map from '../../assets/img/map.svg';
+import mapLogo from '../../assets/img/covalent-bond.svg';
 import logo from '../../assets/img/covalent-compact.png';
-
 import styles from './Connect.scss';
 
 export default class Connect extends Component {
@@ -24,7 +22,7 @@ export default class Connect extends Component {
           </figure>
           <img />
           <ul className="address-list">
-            <li>general inquiry: <a href="mailto:hello@covalentarchitecture.com">hello@covalentarchitecture.com</a></li>
+            <li>General Inquiry: <a href="mailto:hello@covalentarchitecture.com">hello@covalentarchitecture.com</a></li>
             <li>Antoinette Lettiere: <a href="mailto:antoinette@covalentarchitecture.com">antoinette@covalentarchitecture.com</a></li>
             <li>Melanie Poe: <a href="mailto:melanie@covalentarchitecture.com">melanie@covalentarchitecture.com</a></li>
             <li>James Schmidt: <a href="mailto:james@covalentarchitecture.com">james@covalentarchitecture.com</a></li>
