@@ -12,7 +12,6 @@ export default class Connect extends Component {
           <img src={map} className="map-image" />
           <img className="map-logo" src={mapLogo} />
         </div>
-
         <section className="contact">
           <figure>
             <img className="logo" src={logo} />

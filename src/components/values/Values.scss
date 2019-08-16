@@ -12,8 +12,18 @@
         font-size: 2rem;
     }
 
+    sub {
+        margin-left: 3rem;
+        color: $footer-bar;
+    }
+
     .right {
         align-self: flex-end;
+    }
+
+    .collab-sub {
+        color: black;
+        font-family: 'GothicBI';
     }
 
     .integrity {
@@ -43,15 +53,5 @@
 
     .red {
         color: $red;
-    }
-
-    sub {
-        margin-left: 3rem;
-        color: $footer-bar;
-    }
-
-    .collab-sub {
-        color: black;
-        font-family: 'GothicBI';
     }
 }

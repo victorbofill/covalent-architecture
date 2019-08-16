@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import styles from './Values.scss';
 
 export default class Values extends Component {
