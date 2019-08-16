@@ -4,12 +4,12 @@ import map from '../../assets/img/map.png';
 import mapLogo from '../../assets/img/covalent-bond.png';
 import logo from '../../assets/img/covalent-compact.png';
 
-import './Connect.scss';
+import styles from './Connect.scss';
 
 export default class Connect extends Component {
   render() {
     return (
-      <article className="connect">
+      <article className={styles.Connect}>
         <div className="map">
           <img src={map} />
           <img className="map-logo" src={mapLogo} />

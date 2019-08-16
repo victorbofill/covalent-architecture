@@ -1,4 +1,8 @@
-.connect {
+@import '../../Variables.scss';
+
+
+:local(.Connect) {
+  @include content-size;
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
