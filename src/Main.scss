@@ -1,0 +1,57 @@
+@import './Variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Gothic';
+  src: url(./assets/fonts/gothic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'GothicB';
+  src: url(./assets/fonts/gothicb.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'GothicBI';
+  src: url(./assets/fonts/gothicbi.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Moderna';
+  src: url(./assets/fonts/moderna.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url(./assets/fonts/comfortaa.woff) format('woff');
+}
+
+body {
+  font-family: 'Gothic';
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+}
+
+.body-copy-p {
+  margin: 2rem 3rem;
+}
+
+.body-copy-p:last-of-type {
+  margin: 2rem 3rem 0;
+}

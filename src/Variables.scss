@@ -1,0 +1,72 @@
+// Colors
+
+$footer-gray: rgb(41, 41, 42);
+$footer-link: rgb(168, 169, 172);
+$footer-bar: #808285;
+$green: rgb(156, 194, 126);
+$purple: rgb(159, 173, 205);
+$red: rgb(192, 119, 141);
+$blue: rgb(109, 182, 201);
+$yellow: rgb(237, 222, 88);
+
+
+
+// SIZING
+
+$view-height: calc(100vh - 17.7rem);
+
+
+
+// MIXINS
+
+@mixin content-size {
+  width: 100%;
+	height: $view-height;
+	padding: 5rem 6rem;
+	overflow: hidden;
+}
+
+@mixin story-process-common {
+  @include content-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+	.content-container {
+		display: grid;
+		grid-template-columns: 37.5rem auto;
+		grid-column-gap: 4rem;
+		align-content: center;
+	}
+	
+	figure {
+		align-self: center;
+
+		img {
+			width: 100%;
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+	}
+
+	.text-container {
+		grid-column-start: 2;
+		align-self: center;
+
+		aside {
+			margin-bottom: 2rem;
+
+			span {
+				display: block;
+			}
+
+			.quote-text {
+				font-family: 'GothicBI';
+			}
+			
+			.quote-author {
+				text-align: right;	
+			}
+		}
+	}
+}
