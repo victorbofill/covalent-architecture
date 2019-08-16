@@ -23,7 +23,7 @@ export default class App extends Component {
 
     return (
       <Router>
-        <header className="AppHeader">
+        <header className={styles.AppHeader}>
           <ul className="ul">
             <NavLink
               to="/story"
