@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "node server.js",
-    "start:app": "webpack-dev-server --hot --mode development",
-    "start:watch": "nodemon server.js"
+    "start:server": "node server.js",
+    "start:server:watch": "nodemon server.js",
+    "start:app": "webpack-dev-server --hot --mode development"
   },
   "author": "Victor Bofill",
   "license": "MIT",
