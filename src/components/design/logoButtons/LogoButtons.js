@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-
 import api from '../../../services/dropbox/api';
-
-import './LogoButtons.scss';
+import styles from './LogoButtons.scss';
 
 export default class Story extends Component {
   state = {
@@ -32,7 +30,7 @@ export default class Story extends Component {
     const { buttonDictionary } = this;
 
     return (
-      <figure className="button-container">
+      <figure className={styles.buttonContainer}>
         {/* The class names of these buttons is less than ideal in order to account for potential changes in the category names */}
         {categories.length && categories.map((category, index) => {
           return <NavLink

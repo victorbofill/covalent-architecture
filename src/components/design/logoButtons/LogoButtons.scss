@@ -1,58 +1,66 @@
-.button-container {
-  height: 35em;
-  width: 43em;
+@import '../../../Variables.scss';
+
+
+:local(.buttonContainer) {
+  height: 42em;
+  width: auto;
   position: relative;
   background-image: url('../../../assets/img/covalent-bond.svg');
   background-repeat: no-repeat;
   font-size: 14pt;
-
+  
   .button {
     border-radius: 50%;
     position: absolute;
-
+    
     p {
       margin: 0;
       top: 48%;
       left: 50%;
       transform: translateX(-50%);
       position: absolute;
+      color: black;
+      font-family: 'GothicB';
+      font-size: 3rem;
     }
   }
-
+  
   .firstButton {
     height: 12em;
     width: 12em;
-    top: 7.5em;
+    top: 9.7em;
+    left: 1.5rem;
     z-index: 2;
   }
   
   .secondButton {
     height: 16em;
     width: 16em;
-    left: 7em;
+    left: 10.3em;
+    top: 1.5rem;
   }
   
   .thirdButton {
     height: 21.5em;
     width: 21.5em;
-    top: 9em;
-    left: 16.5em;
+    top: 12.7em;
+    left: 21.8em;
     z-index: 0;
   }
   
   .fourthButton {
     height: 9.4em;
     width: 9.4em;
-    top: 8.5em;
-    left: 32.8em;
+    top: 10.3em;
+    left: 40.5em;
     z-index: 1;
   }
   
   .fifthButton {
     height: 9.2em;
     width: 9.2em;
-    top: 25.5em;
-    left: 29.5em;
+    top: 31em;
+    left: 36.4em;
     z-index: 1;
   }
 }
