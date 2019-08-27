@@ -2,39 +2,47 @@
 
 
 :local(.design) {
-    @include content-size;
+	@include content-size;
+	position: relative;
+	top: 1rem;
+	right: .5rem;
 
-    img {
-        display: block;
-        width: 50%;
-        margin: 0 auto;
-    }
+	.right {
+		position: absolute;
+		top: 6rem;
+		right: 5rem;
 
-    blockquote {
-        margin: 2em auto;
-    }
+		p {
+			font-size: 1.8rem;
+			line-height: 2.6rem;
+		}
 
-    .right {
-        margin-left: 25%;
-    }
-    
-    .buzz-word {
-        font-size: 2em;
-    }
-    
-    .green {
-        color: rgb(156, 194, 126);
-    }
-    
-    .blue {
-        color: rgb(109, 182, 201);
-    }
-    
-    .purple {
-        color: rgb(159, 173, 205);
-    }
-    
-    sub {
-        margin-left: 2em;
-    }
+		p:nth-child(2) {
+			margin: 7rem 0;
+		}
+
+		.big {
+			font-size: 3rem;
+			font-family: 'GothicB';
+			line-height: 4rem;
+		}
+
+		.small {
+			font-size: 1.4rem;
+			color: $footer-bar;
+			line-height: 1rem;
+		}
+	}
+
+	.purple {
+		color: $purple;
+	}
+
+	.green {
+		color: $green;
+	}
+
+	.blue {
+		color: $blue;
+	}
 }
