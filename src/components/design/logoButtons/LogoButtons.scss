@@ -1,7 +1,7 @@
 @import '../../../Variables.scss';
 
 
-.button-container {
+:local(.buttonContainer) {
   height: 42em;
   width: auto;
   position: relative;
