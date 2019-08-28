@@ -20,6 +20,31 @@
     }
   }
 
+  button:before {
+    content: '  ';
+    white-space: pre;
+  }
+
+  button:after {
+    content: '  |';
+    color: $footer-bar;
+    white-space: pre;
+    position: relative;
+    bottom: 2px;
+  }
+
+  button:first-child {
+    &:before {
+      content: '';
+    }
+  }
+
+  button:last-child {
+    &:after {
+      content: '';
+    }
+  }
+
   .category-buttons {
     background: lightgreen;
     display: flex;
