@@ -11,7 +11,7 @@
   button {
     color: $footer-gray;
     font-family: 'GothicB';
-    margin: 2rem 0;
+    margin: 1rem 0;
     
     .category-selector {
       font-size: 3rem;
@@ -57,11 +57,25 @@
     background: pink;
     margin: 0 auto;
     width: 100%;
-    // height: auto;
     outline: 2px solid purple;
 
-    img {
-      max-height: 30em;
+    .slider-wrapper {
+      height: 45rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .carousel {
+      display: flex;
+      justify-content: center;
     }
   }
 

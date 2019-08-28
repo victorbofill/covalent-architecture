@@ -50,7 +50,12 @@ export default class Projects extends Component {
 
 
         <section className="carousel-container">
-          <Carousel>
+          <Carousel 
+            showStatus={false}
+          >
+
+
+
             {imageLinks.length && imageLinks.map(imageLink => {
               return <div key={imageLink}>
                 <img src={imageLink} />
