@@ -64,13 +64,13 @@ export default class Projects extends Component {
         <section className="category-buttons">
           {categories.length && categories.map(categoryObject => {
             const { category } = categoryObject;
-            const className = category === activeCategory ? 'active button' : 'button';
+            const className = category === activeCategory ? 'activeButton' : 'button';
             return <button
               key={category}
               value={category}
               onClick={retrieveProjects}
               className={className}>
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              <span className="category-selector">{category.charAt(0).toUpperCase() + category.slice(1)}</span>
             </button>;
           })}
         </section>
@@ -78,18 +78,18 @@ export default class Projects extends Component {
 
         <section className="project-buttons">
           {projects.map(project => {
-            const className = project === activeCategory ? 'active button' : 'button';
+            const className = project === activeCategory ? 'activeButton' : 'button';
             return <button
               key={project}
               value={project}
               onClick={retrieveImageLinks}
               className={className}>
-              {project.charAt(0).toUpperCase() + project.slice(1)}
+              <span className="project-selector">{project.charAt(0).toUpperCase() + project.slice(1)}</span>
             </button>;
           })}
         </section>
 
-        
+
       </article>
     );
   }
