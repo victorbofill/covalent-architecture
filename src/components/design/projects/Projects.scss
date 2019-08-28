@@ -6,12 +6,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: .8rem;
   width: 100%;
 
   button {
-    color: $footer-gray;
     font-family: 'GothicB';
-    margin: 1rem 0;
+    color: $footer-link;
   }
   
   .activeButton {
@@ -25,7 +26,7 @@
   
   button:after {
     content: '  |';
-    color: $footer-bar;
+    color: $footer-link;
     white-space: pre;
     position: relative;
     bottom: 2px;
@@ -44,10 +45,7 @@
   }
 
   .carousel-container {
-    background: pink;
-    margin: 0 auto;
     width: 100%;
-    outline: 2px solid purple;
 
     .slider-wrapper {
       height: 35rem;
@@ -55,7 +53,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      
       
       img {
         width: 100%;
@@ -67,12 +64,17 @@
       display: flex;
       justify-content: center;
     }
+
+    .control-arrow:before {
+      background: transparent;
+    }
   }
 
 
   .category-buttons {
-    background: lightgreen;
     display: flex;
+    margin: 1rem 0 1.5rem;
+    color: $footer-bar;
 
     button {
       font-size: 3rem;
@@ -80,8 +82,14 @@
   }
 
   .project-buttons {
-    background: lightyellow;
     display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem 0;
+    width: 100vw;
+    background: $footer-gray;
+    color: pink;
 
     button {
       font-size: 2.5rem;

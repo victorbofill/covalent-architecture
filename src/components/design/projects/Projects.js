@@ -50,10 +50,7 @@ export default class Projects extends Component {
 
 
         <section className="carousel-container">
-          <Carousel 
-            showStatus={false}
-          >
-
+          <Carousel showStatus={false}>
 
 
             {imageLinks.length && imageLinks.map(imageLink => {
@@ -83,6 +80,9 @@ export default class Projects extends Component {
 
         <section className="project-buttons">
           {projects.map(project => {
+
+            {/* ISSUE ON LINE BELOW - ACTICE CATEGORY WILL MATCH CATEGORY NOT PROJECT */}
+
             const className = project === activeCategory ? 'activeButton' : 'button';
             return <button
               key={project}
