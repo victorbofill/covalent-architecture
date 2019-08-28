@@ -12,6 +12,7 @@ export default class Projects extends Component {
     categories: [],
     projects: [''],
     activeCategory: '',
+    activeProject: '',
   }
 
   componentDidMount() {
@@ -38,12 +39,13 @@ export default class Projects extends Component {
     const project = e.target.value;
     const { activeCategory } = this.state;
     const imageLinks = await api.getImageLinks(activeCategory, project);
+    this.setState({ activeProject: project });
     this.setState({ imageLinks });
   }
 
   render() {
     const { retrieveProjects, retrieveImageLinks } = this;
-    const { categories, projects, imageLinks, activeCategory } = this.state;
+    const { categories, projects, imageLinks, activeCategory, activeProject } = this.state;
 
     return (
       <article className="projects">
@@ -80,10 +82,7 @@ export default class Projects extends Component {
 
         <section className="project-buttons">
           {projects.map(project => {
-
-            {/* ISSUE ON LINE BELOW - ACTICE CATEGORY WILL MATCH CATEGORY NOT PROJECT */}
-
-            const className = project === activeCategory ? 'activeButton' : 'button';
+            const className = project === activeProject ? 'activeButton' : 'button';
             return <button
               key={project}
               value={project}
