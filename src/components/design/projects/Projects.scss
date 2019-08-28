@@ -1,9 +1,15 @@
+@import '../../../Variables.scss';
+
 .projects {
+  @include content-size;
   display: flex;
   flex-direction: column;
-  max-height: 48em;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
   .carousel-container {
+    background: pink;
     display: block;
     margin: 0 auto;
     max-width: 800px;
@@ -15,6 +21,7 @@
   }
 
   .category-buttons {
+    background: lightgreen;
     display: flex;
 
     button {
@@ -23,6 +30,7 @@
   }
 
   .project-buttons {
+    background: lightyellow;
     display: flex;
 
     button {
