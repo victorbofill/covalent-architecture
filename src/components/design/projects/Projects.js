@@ -47,19 +47,6 @@ export default class Projects extends Component {
 
     return (
       <article className="projects">
-        <select
-          onChange={retrieveProjects}
-          value={activeCategory}
-        >
-          {categories.length && categories.map(categoryObject => {
-            const { category } = categoryObject;
-            return <option
-              key={category}
-              value={category}>
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </option>;
-          })}
-        </select>
         <section className="carousel-container">
           <Carousel>
             {imageLinks.length && imageLinks.map(imageLink => {
@@ -70,15 +57,31 @@ export default class Projects extends Component {
             })}
           </Carousel>
         </section>
-        <select onChange={retrieveImageLinks}>
-          {projects.map(project => {
-            return <option
-              key={project}
-              value={project}>
-              {project.charAt(0).toUpperCase() + project.slice(1)}
-            </option>;
+        <section className="category-buttons">
+          {categories.length && categories.map(categoryObject => {
+            const { category } = categoryObject;
+            const className = category === activeCategory ? 'active button' : 'button';
+            return <button
+              key={category}
+              value={category}
+              onClick={retrieveProjects}
+              className={className}>
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>;
           })}
-        </select>
+        </section>
+        <section className="project-buttons">
+          {projects.map(project => {
+            const className = project === activeCategory ? 'active button' : 'button';
+            return <button
+              key={project}
+              value={project}
+              onClick={retrieveImageLinks}
+              className={className}>
+              {project.charAt(0).toUpperCase() + project.slice(1)}
+            </button>;
+          })}
+        </section>
       </article>
     );
   }

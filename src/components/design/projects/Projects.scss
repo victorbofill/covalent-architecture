@@ -13,4 +13,20 @@
       max-height: 30em;
     }
   }
+
+  .category-buttons {
+    display: flex;
+
+    button {
+      font-size: 18pt;
+    }
+  }
+
+  .project-buttons {
+    display: flex;
+
+    button {
+      font-size: 18pt;
+    }
+  }
 }
