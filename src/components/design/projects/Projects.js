@@ -75,7 +75,7 @@ export default class Projects extends Component {
               value={category}
               onClick={retrieveProjects}
               className={className}>
-              <span className="category-selector">{category.charAt(0).toUpperCase() + category.slice(1)}</span>
+              {category.charAt(0).toUpperCase() + category.slice(1)}
             </button>;
           })}
         </section>
@@ -89,7 +89,7 @@ export default class Projects extends Component {
               value={project}
               onClick={retrieveImageLinks}
               className={className}>
-              <span className="project-selector">{project.charAt(0).toUpperCase() + project.slice(1)}</span>
+              {project.charAt(0).toUpperCase() + project.slice(1)}
             </button>;
           })}
         </section>
