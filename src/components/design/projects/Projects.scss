@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: .8rem;
+  top: 1rem;
   width: 100%;
 
   button {
@@ -48,7 +48,7 @@
     width: 100%;
 
     .slider-wrapper {
-      height: 35rem;
+      height: 40rem;
       overflow: hidden;
       display: flex;
       justify-content: center;
@@ -73,7 +73,7 @@
 
   .category-buttons {
     display: flex;
-    margin: 1rem 0 1.5rem;
+    margin: 1rem 0 5.5rem;
     color: $footer-bar;
 
     button {

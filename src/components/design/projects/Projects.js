@@ -49,12 +49,8 @@ export default class Projects extends Component {
 
     return (
       <article className="projects">
-
-
         <section className="carousel-container">
           <Carousel showStatus={false}>
-
-
             {imageLinks.length && imageLinks.map(imageLink => {
               return <div key={imageLink}>
                 <img src={imageLink} />
@@ -63,8 +59,6 @@ export default class Projects extends Component {
             })}
           </Carousel>
         </section>
-
-
         <section className="category-buttons">
           {categories.length && categories.map(categoryObject => {
             const { category } = categoryObject;
@@ -78,8 +72,6 @@ export default class Projects extends Component {
             </button>;
           })}
         </section>
-
-
         <section className="project-buttons">
           {projects.map(project => {
             const className = project === activeProject ? 'activeButton' : 'button';
@@ -92,8 +84,6 @@ export default class Projects extends Component {
             </button>;
           })}
         </section>
-
-
       </article>
     );
   }
