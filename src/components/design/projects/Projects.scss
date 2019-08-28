@@ -10,10 +10,10 @@
 
   .carousel-container {
     background: pink;
-    display: block;
     margin: 0 auto;
-    max-width: 800px;
-    height: 40em;
+    width: 100%;
+    // height: auto;
+    outline: 2px solid purple;
 
     img {
       max-height: 30em;
