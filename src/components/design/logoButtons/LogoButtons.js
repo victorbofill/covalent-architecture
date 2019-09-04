@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import api from '../../../services/dropbox/api';
 import styles from './LogoButtons.scss';
 
 export default class Story extends Component {
@@ -9,35 +8,34 @@ export default class Story extends Component {
   }
 
   buttonDictionary = [
-    'firstButton',
-    'secondButton',
-    'thirdButton',
-    'fourthButton',
-    'fifthButton',
+    { name: 'civic',
+      class: 'firstButton',
+    },
+    { name: 'commercial',
+      class: 'secondButton',
+    },
+    { name: 'industrial',
+      class: 'thirdButton',
+    },
+    { name: 'planning',
+      class: 'fourthButton',
+    },
+    { name: 'residential',
+      class: 'fifthButton',
+    },
   ]
 
-  componentDidMount() {
-    this.retrieveCategories();
-  }
-
-  retrieveCategories = async () => {
-    const categories = await api.getCategories();
-    this.setState({ categories });
-  }
-
   render() {
-    const { categories } = this.state;
     const { buttonDictionary } = this;
 
     return (
       <figure className={styles.buttonContainer}>
-        {/* The class names of these buttons is less than ideal in order to account for potential changes in the category names */}
-        {categories.length && categories.map((category, index) => {
+        {buttonDictionary.map(button => {
           return <NavLink
-            key={category.category}
-            to={`/design/projects?${category.category}`}>
-            <div className={`${buttonDictionary[index]} button`}>
-              <p>{category.category.charAt(0).toUpperCase() + category.category.slice(1)}</p>
+            key={button.name}
+            to={`/design/projects?${button.name}`}>
+            <div className={`${button.class} button`}>
+              <p>{button.name.charAt(0).toUpperCase() + button.name.slice(1)}</p>
             </div>
           </NavLink>;
         })}

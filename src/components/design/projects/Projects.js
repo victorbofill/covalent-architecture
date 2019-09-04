@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
-import api from '../../../services/dropbox/api';
+import { NavLink } from 'react-router-dom';
+import projects from '../../../assets/projects/index';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
@@ -8,78 +8,61 @@ import './Projects.scss';
 
 export default class Projects extends Component {
   state = {
-    imageLinks: [],
-    categories: [],
-    projects: [''],
-    activeCategory: '',
-    activeProject: '',
+    activeCategory: null,
+    activeProject: null,
   }
 
   componentDidMount() {
     const activeCategory = window.location.search.slice(1);
     this.setState({ activeCategory });
-    this.retrieveCategories();
-    this.retrieveProjects({ target: { value: activeCategory } });
   }
 
-  retrieveCategories = async () => {
-    const categories = await api.getCategories();
-    this.setState({ categories });
+  setActiveCategory(e) {
+    this.setState({ activeCategory: e.target.value, activeProject: null });
   }
 
-  retrieveProjects = async e => {
-    const category = e.target.value;
-    const projects = await api.getProjects(category);
-    this.setState({ projects, activeCategory: category });
-    this.retrieveImageLinks({ target: { value: projects[0] } });
-  }
-
-  retrieveImageLinks = async e => {
-    this.setState({ imageLinks: [] });
-    const project = e.target.value;
-    const { activeCategory } = this.state;
-    const imageLinks = await api.getImageLinks(activeCategory, project);
-    this.setState({ activeProject: project });
-    this.setState({ imageLinks });
+  setActiveProject(e) {
+    this.setState({ activeProject: e.target.value });
   }
 
   render() {
-    const { retrieveProjects, retrieveImageLinks } = this;
-    const { categories, projects, imageLinks, activeCategory, activeProject } = this.state;
+    const { activeCategory, activeProject } = this.state;
 
     return (
       <article className="projects">
         <section className="carousel-container">
           <Carousel showStatus={false}>
-            {imageLinks.length && imageLinks.map(imageLink => {
-              return <div key={imageLink}>
-                <img src={imageLink} />
+            {activeCategory && activeProject && projects[activeCategory][activeProject].map(image => {
+              return <div key={image.name}>
+                <img src={image} />
                 <p className="legend">Legend 1</p>
               </div>;
             })}
           </Carousel>
         </section>
         <section className="category-buttons">
-          {categories.length && categories.map(categoryObject => {
-            const { category } = categoryObject;
+          {Object.keys(projects).map(category => {
             const className = category === activeCategory ? 'activeButton' : 'button';
-            return <button
+            return <NavLink
               key={category}
-              value={category}
-              onClick={retrieveProjects}
-              className={className}>
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </button>;
+              to={`/design/projects?${category}`}>
+              <button
+                value={category}
+                className={className}
+                onClick={e => this.setActiveCategory(e)}>
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+            </NavLink>;
           })}
         </section>
         <section className="project-buttons">
-          {projects.map(project => {
+          {activeCategory && Object.keys(projects[activeCategory]).map(project => {
             const className = project === activeProject ? 'activeButton' : 'button';
             return <button
               key={project}
               value={project}
-              onClick={retrieveImageLinks}
-              className={className}>
+              className={className}
+              onClick={e => this.setActiveProject(e)}>
               {project.charAt(0).toUpperCase() + project.slice(1)}
             </button>;
           })}
