@@ -63,6 +63,11 @@
     .address {
       margin: 1rem auto;
       text-align: center;
+      display: flex;
+
+      div {
+        margin: 1rem 2rem;
+      }
 
       h2 {
         color: $red;

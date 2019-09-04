@@ -34,7 +34,8 @@ export default class Connect extends Component {
             </div>
             <div>
               <h2>office address</h2>
-              <p>311 W Evergreen Blvd. Suite 110</p>
+              <p>311 W Evergreen Blvd.</p>
+              <p> Suite 110</p>
               <p>Vancouver, WA 98660</p>
             </div>
           </div>
