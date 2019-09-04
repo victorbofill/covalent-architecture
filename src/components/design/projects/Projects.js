@@ -43,16 +43,13 @@ export default class Projects extends Component {
         <section className="category-buttons">
           {Object.keys(projects).map(category => {
             const className = category === activeCategory ? 'activeButton' : 'button';
-            return <NavLink
+            return <button
               key={category}
-              to={`/design/projects?${category}`}>
-              <button
-                value={category}
-                className={className}
-                onClick={e => this.setActiveCategory(e)}>
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </button>
-            </NavLink>;
+              value={category}
+              className={className}
+              onClick={e => this.setActiveCategory(e)}>
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>;
           })}
         </section>
         <section className="project-buttons">
