@@ -8,19 +8,19 @@ export default class Story extends Component {
   }
 
   buttonDictionary = [
-    { name: 'civic',
+    { name: 'industrial',
       class: 'firstButton',
     },
     { name: 'commercial',
       class: 'secondButton',
     },
-    { name: 'industrial',
+    { name: 'residential',
       class: 'thirdButton',
     },
-    { name: 'planning',
+    { name: 'homes',
       class: 'fourthButton',
     },
-    { name: 'residential',
+    { name: 'civic',
       class: 'fifthButton',
     },
   ]

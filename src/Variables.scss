@@ -65,8 +65,14 @@ $view-height: calc(100vh - 17.7rem);
 			}
 			
 			.quote-author {
-				text-align: right;	
-			}
+        text-align: left;
+        margin-left: 31rem;
+      }
+      
+      .quote-author.foster {
+        text-align: right;
+        margin-right: 0;
+      }
 		}
 	}
 }

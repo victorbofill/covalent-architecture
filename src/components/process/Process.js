@@ -14,7 +14,7 @@ export default class Process extends Component {
             <aside>
               <p>
                 <span className="quote-text">"As an architect you design for the present, with an awareness of the past, for a future which is essentially unknown."</span>
-                <span className="quote-author">- Norman Foster</span>
+                <span className="quote-author foster">- Norman Foster</span>
               </p>
             </aside>
             <div>

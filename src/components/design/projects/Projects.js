@@ -30,11 +30,10 @@ export default class Projects extends Component {
     return (
       <article className="projects">
         <section className="carousel-container">
-          <Carousel showStatus={false}>
+          <Carousel showStatus={false} showThumbs={false}>
             {activeCategory && activeProject && projects[activeCategory][activeProject].map(image => {
               return <div key={image.name}>
                 <img src={image} />
-                <p className="legend">Legend 1</p>
               </div>;
             })}
           </Carousel>

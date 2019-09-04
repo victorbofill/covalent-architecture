@@ -48,22 +48,46 @@
   .carousel-container {
     width: 100%;
 
+    .slider {
+      max-height: 100%;
+    }
+
+    .slide {
+      display: flex;
+      justify-content: center;
+
+      div {
+        max-height: 100%;
+
+        img {
+          max-height: 100%;
+        }
+      }
+    }
+
     .slider-wrapper {
-      height: 40rem;
+      height: 71rem;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      
-      img {
-        width: 100%;
-        height: auto;
+
+      .slider {
+        min-height: 100%;
       }
     }
 
     .carousel {
       display: flex;
       justify-content: center;
+    }
+
+    .carousel img {
+      width: auto;
+    }
+
+    .carousel .thumb img {
+      width: 100%;
     }
 
     .control-arrow:before {
@@ -80,20 +104,30 @@
       font-size: 3rem;
       padding: .5rem;
     }
+
+    button:hover {
+      cursor: pointer;
+    }
   }
 
   .project-buttons {
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 0;
+    bottom: 3rem;
     padding: 1rem 0;
     width: 100vw;
     background: $footer-gray;
+    box-sizing: none;
 
     button {
       padding: .5rem;
       font-size: 2rem;
+      background-color: $footer-gray;
+    }
+ 
+    button:hover {
+      cursor: pointer;
     }
   }
 }

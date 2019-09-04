@@ -3,10 +3,13 @@
 
 :local(.Connect) {
   @include content-size;
-  display: grid;
+  display: flex;
+  flex-direction: row;
   grid-template-columns: auto 1fr;
-  padding: 12rem 19rem;
   transform: scale(1.1);
+  text-align: center;
+  height: auto;
+  justify-content: center;
 
 	.map {
     position: relative;
@@ -18,7 +21,7 @@
 		img.map-logo {
 			position: absolute;
 			z-index: 999;
-      left: -4rem;
+      left: -9rem;
       top: 7rem;
       height: 25rem;
 			opacity: .5;
@@ -29,7 +32,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    bottom: 4rem;
     
     figure {
       margin: 1rem auto;
