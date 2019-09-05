@@ -13,7 +13,8 @@ export default class Projects extends Component {
 
   componentDidMount() {
     const activeCategory = window.location.search.slice(1);
-    this.setState({ activeCategory });
+    const activeProject = Object.keys(projects[activeCategory])[0];
+    this.setState({ activeCategory, activeProject });
   }
 
   setActiveCategory(e) {
