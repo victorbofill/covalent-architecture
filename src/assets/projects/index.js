@@ -2,19 +2,25 @@ function importAll(r) {
   return r.keys().map(r);
 }
 
-const camas = importAll(require.context('./civic/camas', false, /\.(png|jpe?g|svg)$/));
-const food = importAll(require.context('./commercial/food', false, /\.(png|jpe?g|svg)$/));
-const momentum = importAll(require.context('./commercial/momentum', false, /\.(png|jpe?g|svg)$/));
-const office = importAll(require.context('./commercial/office', false, /\.(png|jpe?g|svg)$/));
-const storage = importAll(require.context('./industrial/storage', false, /\.(png|jpe?g|svg)$/));
-const byebee = importAll(require.context('./homes/byebee', false, /\.(png|jpe?g|svg)$/));
-const dawson = importAll(require.context('./residential/dawson', false, /\.(png|jpe?g|svg)$/));
-const hetherwood = importAll(require.context('./residential/hetherwood', false, /\.(png|jpe?g|svg)$/));
+const washougal = importAll(require.context('./civic/City of Washougal City Hall Renovation', false, /\.(png|jpe?g|svg)$/));
+
+const foodHall = importAll(require.context('./commercial/Camas Food Hall', false, /\.(png|jpe?g|svg)$/));
+const creativeOfficeSpace = importAll(require.context('./commercial/Creative Office Space', false, /\.(png|jpe?g|svg)$/));
+const momentumBlock = importAll(require.context('./commercial/Momentum Block', false, /\.(png|jpe?g|svg)$/));
+
+const hobiesRidge = importAll(require.context('./homes/Hobie\'s Ridge', false, /\.(png|jpe?g|svg)$/));
+const nakshatra = importAll(require.context('./homes/Nakshatra', false, /\.(png|jpe?g|svg)$/));
+
+const camasStorage = importAll(require.context('./industrial/Camas Storage', false, /\.(png|jpe?g|svg)$/));
+const columbiaRock = importAll(require.context('./industrial/Columbia Rock', false, /\.(png|jpe?g|svg)$/));
+
+const suitesAndWalkups = importAll(require.context('./residential/Executive Suites and Walkups', false, /\.(png|jpe?g|svg)$/));
+const hetherwood = importAll(require.context('./residential/Hetherwood', false, /\.(png|jpe?g|svg)$/));
 
 export default {
-  civic: { camas: camas },
-  commercial: { food: food, momentum: momentum, office: office },
-  industrial: { storage: storage },
-  homes: { byebee: byebee },
-  residential: { dawson: dawson, hetherwood: hetherwood },
+  civic: { washougal: washougal },
+  commercial: { foodHall: foodHall, creativeOfficeSpace: creativeOfficeSpace, momentumBlock: momentumBlock },
+  homes: { hobiesRidge: hobiesRidge, nakshatra: nakshatra },
+  industrial: { camasStorage: camasStorage, columbiaRock: columbiaRock },
+  residential: { suitesAndWalkups: suitesAndWalkups, hetherwood: hetherwood },
 };
