@@ -18,9 +18,24 @@ const suitesAndWalkups = importAll(require.context('./residential/Executive Suit
 const hetherwood = importAll(require.context('./residential/Hetherwood', false, /\.(png|jpe?g|svg)$/));
 
 export default {
-  civic: { washougal: washougal },
-  commercial: { foodHall: foodHall, creativeOfficeSpace: creativeOfficeSpace, momentumBlock: momentumBlock },
-  homes: { hobiesRidge: hobiesRidge, nakshatra: nakshatra },
-  industrial: { camasStorage: camasStorage, columbiaRock: columbiaRock },
-  residential: { suitesAndWalkups: suitesAndWalkups, hetherwood: hetherwood },
+  civic: {
+    washougal: { name: 'washougal city hall renovation', images: washougal },
+  },
+  commercial:{
+    foodHall:{ name: 'camas food hall', images: foodHall },
+    creativeOfficeSpace: { name: 'creative office space', images: creativeOfficeSpace },
+    momentumBlock: { name: 'momentum block', images: momentumBlock },
+  },
+  homes: {
+    hobiesRidge: { name: 'hobie\'s ridge', images: hobiesRidge },
+    nakshatra: { name: 'nakshatra', images: nakshatra },
+  },
+  industrial: {
+    camasStorage: { name: 'camas storage', images: camasStorage },
+    columbiaRock: { name: 'columbia rock', images: columbiaRock },
+  },
+  residential: {
+    suitesAndWalkups: { name: 'executive suites and walkups', images: suitesAndWalkups },
+    hetherwood: { name: 'hetherwood', images: hetherwood },
+  },
 };

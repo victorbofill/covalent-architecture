@@ -13,7 +13,7 @@ export default class Projects extends Component {
 
   componentDidMount() {
     const activeCategory = window.location.search.slice(1);
-    const activeProject = Object.keys(projects[activeCategory])[0];
+    const activeProject = Object.keys(projects[activeCategory])[0].name;
     this.setState({ activeCategory, activeProject });
   }
 
@@ -22,6 +22,7 @@ export default class Projects extends Component {
   }
 
   setActiveProject(e) {
+    console.log('e: ', e.target.value);
     this.setState({ activeProject: e.target.value });
   }
 
@@ -32,8 +33,8 @@ export default class Projects extends Component {
       <article className="projects">
         <section className="carousel-container">
           <Carousel showStatus={false} showThumbs={false}>
-            {activeCategory && activeProject && projects[activeCategory][activeProject].map(image => {
-              return <div key={image.name}>
+            {activeCategory && activeProject && projects[activeCategory][activeProject].images.map(image => {
+              return <div key={image}>
                 <img src={image} />
               </div>;
             })}
@@ -47,19 +48,20 @@ export default class Projects extends Component {
               value={category}
               className={className}
               onClick={e => this.setActiveCategory(e)}>
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {category}
             </button>;
           })}
         </section>
         <section className="project-buttons">
-          {activeCategory && Object.keys(projects[activeCategory]).map(project => {
-            const className = project === activeProject ? 'activeButton' : 'button';
+          {activeCategory && Object.keys(projects[activeCategory]).map(projectName => {
+            const project = projects[activeCategory][projectName];
+            const className = project.name === activeProject ? 'activeButton' : 'button';
             return <button
-              key={project}
-              value={project}
+              key={project.name}
+              value={projectName}
               className={className}
               onClick={e => this.setActiveProject(e)}>
-              {project.charAt(0).toUpperCase() + project.slice(1)}
+              {project.name}
             </button>;
           })}
         </section>

@@ -99,13 +99,13 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 8rem;
+    top: 0rem;
     padding: 1rem 0;
     width: 100vw;
     background: $footer-gray;
 
     button {
-      font-size: 3rem;
+      font-size: 1.5rem;
       padding: .5rem;
       background-color: $footer-gray;
     }
@@ -119,14 +119,14 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 3rem;
+    top: 4rem;
     padding: 1rem 0;
     width: 100vw;
     background: $footer-gray;
 
     button {
       padding: .5rem;
-      font-size: 2rem;
+      font-size: 1rem;
       background-color: $footer-gray;
     }
  
