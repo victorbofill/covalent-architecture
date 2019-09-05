@@ -97,12 +97,17 @@
 
   .category-buttons {
     display: flex;
-    margin: 1rem 5.5rem;
-    color: $footer-bar;
+    justify-content: center;
+    position: absolute;
+    bottom: 8rem;
+    padding: 1rem 0;
+    width: 100vw;
+    background: $footer-gray;
 
     button {
       font-size: 3rem;
       padding: .5rem;
+      background-color: $footer-gray;
     }
 
     button:hover {
@@ -118,7 +123,6 @@
     padding: 1rem 0;
     width: 100vw;
     background: $footer-gray;
-    box-sizing: none;
 
     button {
       padding: .5rem;
